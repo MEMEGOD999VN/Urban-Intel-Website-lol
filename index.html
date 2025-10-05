@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>TerraIntel v3 — Dark</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="hdr-left">
+      <img src="assets/team_logo.png" alt="FPT Aerospace" class="logo">
+      <div class="brand"><div class="title">TerraIntel v3</div><div class="subtitle">Smart City Tactical Dashboard</div></div>
+    </div>
+    <div class="hdr-right">Powered by NASA Earth Observation Data</div>
+  </header>
+  <main class="main">
+    <aside class="sidebar">
+      <h2>Urban Intelligence Priorities</h2>
+      <ol class="priorities">
+        <li><strong>Which parts of the city are experiencing the most growth, and where is new housing development most needed?</strong></li>
+        <li><strong>How would an urban planner determine which communities need better access to food, housing, or transportation?</strong></li>
+        <li><strong>Where should more land be utilized for agricultural activity to feed a growing population?</strong></li>
+      </ol>
+    </aside>
+    <section class="content">
+      <div id="map" class="map"></div>
+      <section class="charts">
+        <h3>NASA POWER Snapshot</h3>
+        <p class="muted">Click on the map to fetch monthly climatology (Temperature & Solar Radiation). Fallback uses a cached Hanoi sample.</p>
+        <canvas id="powerChart" height="150"></canvas>
+        <div id="powerNote" class="note"></div>
+      </section>
+      <section class="analytics">
+        <h3>Urban Insights Analytics</h3>
+        <div class="chart-row">
+          <div class="chart-card"><div class="small-title">Urban Growth (VIIRS)</div><canvas id="growthChart" height="100"></canvas></div>
+          <div class="chart-card"><div class="small-title">NDVI (Vegetation)</div><canvas id="ndviChart" height="100"></canvas></div>
+        </div>
+        <div class="chart-row"><div class="chart-card full"><div class="small-title">LST (Land Surface Temperature)</div><canvas id="lstChart" height="100"></canvas></div></div>
+      </section>
+      <section class="project-plan">
+        <h3>Project Plan — TerraIntel v3 Dark Edition</h3>
+        <div class="plan-text">
+<p><strong>Challenge response</strong></p>
+<p>TerraIntel uses NASA Earth observation data to guide smart urban growth that supports both people and the planet. Integrating datasets such as Landsat (land cover & change), VIIRS Night Lights (urban activity), GRACE (groundwater), GPM (precipitation), and NASA POWER (surface climate) provides city planners with actionable insights on how rapid urbanization affects ecosystems, natural resources, and infrastructure.</p>
+<p>By mapping urban expansion, resource stress, and ecosystem health, we can identify sustainable development zones, prioritize green infrastructure, and prevent environmental degradation while meeting human needs. City leaders — including planning departments, parks, water utilities, and transportation agencies — will use these insights to coordinate investments, set zoning priorities, and design equitable service delivery. Residents contribute local knowledge through participatory reporting (e.g., mobile apps, community surveys) to complement satellite observations and validate priorities identified by the system.</p>
+<p><strong>How datasets support plan topics</strong></p>
+<ul>
+<li><strong>Access & Housing:</strong> Landsat + VIIRS help detect built-area expansion and nighttime economic activity, guiding where new housing and services should be prioritized. City housing offices and community groups collaborate to site affordable housing near transit and services.</li>
+<li><strong>Food & Local Agriculture:</strong> NDVI (MODIS/Landsat), GPM rainfall, and GRACE water storage identify productive parcels suitable for urban agriculture, supported by the parks and urban agriculture offices.</li>
+<li><strong>Mobility & Services:</strong> VIIRS + population grids (SEDAC) show activity centers and under-served corridors; transportation agencies use this to prioritize routes and last-mile solutions.</li>
+</ul>
+<p><strong>City leadership & community role</strong></p>
+<p>City leaders operationalize TerraIntel by embedding data dashboards into planning workflows, convening cross-departmental working groups, and allocating budget to priority projects identified by the platform. Residents validate and refine priorities through community reporting tools and participatory workshops, ensuring the plan reflects lived experiences and local constraints.</p>
+<p><em>TerraIntel therefore frames a pragmatic, data-informed approach to grow cities sustainably while protecting natural capital and improving quality of life.</em></p>
+        </div>
+      </section>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer-left">Developed by <strong>FPT Aerospace Team</strong></div>
+    <div class="footer-right"><img src="assets/team_logo.png" alt="FPT" class="logo small"></div>
+  </footer>
+<script src="script.js"></script>
+</body>
+</html>
